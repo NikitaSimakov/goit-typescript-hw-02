@@ -10,10 +10,7 @@ class Component<T> {
   constructor(public props: T) {}
 }
 
-class Page<T extends Props> extends Component<T> {
-  constructor(props: T) {
-    super(props);
-  }
+class Page extends Component<Props> {
   pageInfo(): void {
     console.log(this.props.title);
   }
